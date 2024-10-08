@@ -6,7 +6,7 @@ import { router } from "expo-router"
 
 const Index = () => {
   const handleClick = () => {
-    router.push("/")
+    router.push("/(tabs)/home")
   }
   return (
     <SafeAreaView className="bg-lightGray h-full">
