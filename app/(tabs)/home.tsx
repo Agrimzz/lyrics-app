@@ -40,7 +40,7 @@ const Home = () => {
   if (error) {
     return (
       <SafeAreaView className="flex-1 justify-center items-center">
-        <Text className="text-red-500">Error loading songs.</Text>
+        <Text className="text-red-500">Error loading songs. {error}</Text>
       </SafeAreaView>
     )
   }
@@ -94,9 +94,9 @@ const Home = () => {
             </View>
           </View>
         )}
-        refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-        }
+        // refreshControl={
+        //   <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        // }
       />
     </SafeAreaView>
   )
