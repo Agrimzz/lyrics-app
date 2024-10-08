@@ -7,6 +7,7 @@ import {
   IconSearch,
   IconUsersGroup,
 } from "tabler-icons-react-native"
+import { StatusBar } from "expo-status-bar"
 
 const TabIcon = ({
   Icon,
@@ -107,6 +108,7 @@ const TabsLayout = () => {
           }}
         />
       </Tabs>
+      <StatusBar style="dark" />
     </>
   )
 }
