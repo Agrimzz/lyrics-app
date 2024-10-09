@@ -11,6 +11,7 @@ import React, { useState } from "react"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { useFetch } from "@/lib/fetch"
 import ArtistsCard from "@/components/ArtistsCard"
+import { router } from "expo-router"
 
 const Home = () => {
   const { data, loading, error, refetch } = useFetch<any>(
@@ -48,7 +49,7 @@ const Home = () => {
   const chartSongs = data?.chart_items
 
   const renderSong = ({ item, index }: { item: any; index: any }) => (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => router.push(`/lyrics/${item.item.id}`)}>
       <View className="flex-row items-center my-4 mx-4 overflow-hidden">
         <Text className="text-lg font-bold mr-4">#{index + 1}</Text>
         <Image
