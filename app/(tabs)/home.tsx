@@ -75,7 +75,7 @@ const Home = () => {
         contentContainerStyle={{ paddingBottom: 20 }}
         ListHeaderComponent={() => (
           <View className="mx-4">
-            <View className="flex space-y-6 pt-4">
+            <View className="flex space-y-6 pt-6">
               <View className="flex-row gap-4">
                 <Image
                   source={require("@/assets/images/logosm.png")}

@@ -51,7 +51,7 @@ const Artists = () => {
 
   const chartArtists = data?.chart_items
   return (
-    <SafeAreaView className="bg-lightGray px-4 pt-4">
+    <SafeAreaView className="bg-lightGray px-4 pt-6">
       <FlatList
         data={chartArtists}
         keyExtractor={(item) => item.item.id.toString()}
