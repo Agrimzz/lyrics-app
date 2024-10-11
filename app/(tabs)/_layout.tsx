@@ -78,16 +78,16 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen
-          name="genre"
+          name="albums"
           options={{
-            title: "genre",
+            title: "albums",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 Icon={IconCategory}
                 color={color}
                 focused={focused}
-                name="Genre"
+                name="Albums"
               />
             ),
           }}
