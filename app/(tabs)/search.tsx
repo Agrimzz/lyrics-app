@@ -62,27 +62,28 @@ const Search = () => {
         </TouchableOpacity>
       </View>
 
-      {loading && (
-        <View className="flex-1 justify-center items-center h-full">
-          <ActivityIndicator size="large" color="#0000ff" />
-        </View>
-      )}
-
-      {error && (
-        <View className="flex-1 justify-center items-center h-full">
-          <Text className="text-red-500">Error loading results: {error}</Text>
-        </View>
-      )}
-
       {data && (
         <FlatList
           data={data.hits}
           keyExtractor={(item) => item.result.id.toString()}
           renderItem={renderItem}
           ListEmptyComponent={() => (
-            <Text className="text-center text-gray-500">No results found</Text>
+            <Text className="text-center text-gray-500 mt-4">
+              No results found
+            </Text>
           )}
         />
+      )}
+      {loading && (
+        <View className="flex-1 justify-center items-center">
+          <ActivityIndicator size="large" color="#0000ff" />
+        </View>
+      )}
+
+      {error && (
+        <View className="flex-1 justify-center items-center">
+          <Text className="text-red-500">Error loading results: {error}</Text>
+        </View>
       )}
     </SafeAreaView>
   )
