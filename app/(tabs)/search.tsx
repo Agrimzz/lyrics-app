@@ -63,13 +63,13 @@ const Search = () => {
       </View>
 
       {loading && (
-        <View className="flex-1 justify-center items-center">
+        <View className="flex-1 justify-center items-center h-full">
           <ActivityIndicator size="large" color="#0000ff" />
         </View>
       )}
 
       {error && (
-        <View className="flex-1 justify-center items-center">
+        <View className="flex-1 justify-center items-center h-full">
           <Text className="text-red-500">Error loading results: {error}</Text>
         </View>
       )}
